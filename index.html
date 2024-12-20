@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <h1>- TODO LIST -</h1>
+  
+  <!-- เพิ่ม GIF อยู่ใต้หัวข้อ - TODO LIST - -->
+  <div class="gif-container">
+    <img id="todoGif" src="https://media.tenor.com/i5Ifwc92G-IAAAAi/hmm.gif" alt="Byun Tear Meme GIF">
+  </div>
+  
+  <div class="add-todo">
+    <input type="text" id="newTodoText" placeholder="New Todo" maxlength="30">
+    <button onclick="addTodo()">Add Todo</button>
+  </div>
+  
+  <div id="todos"></div>
+  <button id="logoutButton">Logout</button>
+  <script src="script.js"></script>
+</body>
+
+</html>

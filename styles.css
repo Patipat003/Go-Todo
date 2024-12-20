@@ -1,0 +1,254 @@
+/* การตั้งค่าทั่วไป */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #202020;
+  color: white;
+  margin: 0;
+  padding: 20px 0 40px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  background-image: linear-gradient(45deg, #70e1f5 25%, transparent 25%) 0 0,
+    linear-gradient(-45deg, #70e1f5 25%, transparent 25%) 0 0,
+    linear-gradient(45deg, transparent 75%, #70e1f5 75%) 0 0,
+    linear-gradient(-45deg, transparent 75%, #70e1f5 75%) 0 0;
+  background-size: 20px 20px;
+  background-repeat: repeat;
+  padding-bottom: 20px;
+}
+
+/* การตั้งค่าหัวข้อ */
+h1 {
+  color: #70e1f5;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 2em;
+  animation: fadeIn 1.5s ease-in-out;
+  text-shadow: 0 0 10px rgba(112, 225, 245, 0.8), 0 0 20px rgba(112, 225, 245, 0.6), 0 0 30px rgba(112, 225, 245, 0.4);
+}
+
+/* กล่องเพิ่ม Todo */
+.add-todo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 10px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* สไตล์ input และปุ่ม */
+.add-todo input {
+  padding: 12px;
+  font-size: 1.2em;
+  width: 400px;
+  border: 2px solid #70e1f5;
+  border-radius: 5px;
+  background-color: #222;
+  color: white;
+  box-shadow: 0 0 10px #70e1f5;
+  transition: all 0.3s ease;
+}
+
+.add-todo input:focus {
+  outline: none;
+  box-shadow: 0 0 15px #70e1f5;
+}
+
+.add-todo button {
+  background-color: #262829;
+  padding: 12px 30px;
+  font-size: 1.2em;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 2px solid #70e1f5;
+  box-shadow: 0 0 10px #70e1f5;
+  animation: scaleIn 0.5s ease-out;
+}
+
+.add-todo button:hover {
+  background-color: #70e1f5;
+}
+
+.add-todo button:focus {
+  outline: none;
+}
+
+/* เพิ่มความกว้างให้กับ listbox */
+#todos {
+  width: 500px;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+/* การตั้งค่าของแต่ละ Todo */
+.todo {
+  background-color: #222;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #70e1f5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+  width: 100%;
+}
+
+/* การตั้งค่าของข้อความ Todo */
+.todo label {
+  color: #fff;
+  font-size: 1.2em;
+  flex-grow: 1;
+}
+
+/* การตั้งค่าของปุ่ม Edit และ Delete */
+.todo .todo-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.todo button {
+  background-color: #262829;
+  color: #fff;
+  margin-left: 10px;
+  border-color: #70e1f5;
+  border-radius: 5px;
+  animation: scaleIn 0.5s ease-out;
+}
+
+.todo button:hover {
+  background-color: #70e1f5;
+}
+
+.todo button:focus {
+  outline: none;
+}
+
+/* ปรับขนาด checkbox */
+input[type="checkbox"] {
+  appearance: none;
+}
+
+input[type="checkbox"]:checked::before {
+  content: '\2713';  /* สัญลักษณ์เครื่องหมายถูก */
+  margin-right: 5px;
+  color: #70e1f5;
+  font-size: 20px;
+}
+
+/* สไตล์สำหรับ gif */
+.gif-container {
+  margin: 10px 0 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.gif-container img {
+  width: 150px;
+  height: auto;
+  border-radius: 10px;
+}
+
+#logoutButton {
+  background-color: #262829;
+  color: white;
+  font-size: 1em;
+  margin-top: 30px;
+  padding: 10px 20px;
+  border: 2px solid #70e1f5;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #70e1f5;
+  transition: all 0.3s ease;
+}
+
+#submit-btn {
+  background-color: #262829;
+  color: white;
+  font-size: 1em;
+  margin-top: 30px;
+  padding: 10px 20px;
+  border: 2px solid #70e1f5;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #70e1f5;
+  transition: all 0.3s ease;
+}
+
+#logoutButton:hover {
+  background-color: #70e1f5;
+  color: black;
+}
+
+#submit-btn:hover {
+  background-color: #70e1f5;
+  color: black;
+}
+
+#logoutButton:focus {
+  outline: none;
+  box-shadow: 0 0 15px #70e1f5;
+}
+
+#submit-btn:focus {
+  outline: none;
+  box-shadow: 0 0 15px #70e1f5;
+}
+
+#loginForm input {
+  padding: 10px;
+  font-size: 1em;
+  margin-left: 20px;
+  width: 400px;
+  border: 2px solid #70e1f5;
+  border-radius: 5px;
+  background-color: #222;
+  color: white;
+  box-shadow: 0 0 10px #70e1f5;
+  transition: all 0.3s ease;
+}
+
+#register-form input {
+  padding: 10px;
+  font-size: 1em;
+  margin-left: 20px;
+  width: 400px;
+  border: 2px solid #70e1f5;
+  border-radius: 5px;
+  background-color: #222;
+  color: white;
+  box-shadow: 0 0 10px #70e1f5;
+  transition: all 0.3s ease;
+}
+
+
+/* การแอนิเมชั่น */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
